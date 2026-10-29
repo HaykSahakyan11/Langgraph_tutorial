@@ -27,8 +27,9 @@ Because termination depends on the number of messages in state (the original req
 Requirements: Python 3.11+ and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/HaykSahakyan11/Langgraph_tutorial.git
 cd Langgraph_tutorial
+git checkout project/reflection-agent
 
 # Create the virtual environment and install dependencies from pyproject.toml / uv.lock
 uv sync
@@ -50,7 +51,7 @@ OPENAI_API_KEY=your-openai-api-key
 uv run main.py
 ```
 
-On import, `main.py` also prints the graph as Mermaid and ASCII, and renders it to `flow.png`. Rendering the PNG with `draw_mermaid_png` calls the Mermaid.ink web service by default, so it needs internet access.
+This prints the graph as Mermaid and ASCII, renders it to `flow.png`, runs the agent on the example tweet, and prints the final revised tweet. Rendering the PNG with `draw_mermaid_png` calls the Mermaid.ink web service by default, so it needs internet access.
 
 ## 📁 Project Structure
 
@@ -113,6 +114,14 @@ Declared in `pyproject.toml`:
 - `langchain-tavily`: installed but not used yet
 - `black`, `isort`: code formatting (also in the `dev` group)
 
-## 👏 Acknowledgment
+## 👤 Author
 
-This project follows the reflection pattern described in the [LangGraph Reflection Tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflection/reflection/).
+**Hayk Sahakyan**. GitHub: [@HaykSahakyan11](https://github.com/HaykSahakyan11)
+
+I built this project while working through a LangGraph course. Each agent is on its own `project/*` branch of this repository.
+
+## 📚 Resources
+
+- [LangGraph course on Udemy](https://www.udemy.com/course/langgraph/) by Eden Marco, which this project follows ([course repo](https://github.com/emarco177/langgraph-course))
+- [LangGraph Reflection tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflection/reflection/)
+- [LangChain](https://github.com/langchain-ai/langchain)
