@@ -80,6 +80,9 @@ celerybeat-schedule
 
 # Environments
 .env
+
+# Chroma vector store (built locally by ingestion.py)
+.chroma/
 .venv
 env/
 venv/
